@@ -1,15 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
+import { initialize } from 'workbox-google-analytics';
 import { apiGet } from '../misc/config';
+
+
+
+const reducer = (prevState, action) => {
+    switch(action.type){
+        case 'FETCH_SUCCESS' : {
+            return {isLoading: false, error: null, show:action.show};
+        }
+
+        case 'FETCH_FAILED' : {
+            return { ...prevState, isLoading: false, error: action.error};
+        }
+
+        default: return(prevState)
+    };
+}
+// eslint-disable-next-line
+const initialState = {
+    show: null,
+    isLoading: true,
+    error: null,
+};
 
 const Show = () => {
  
     const { id } = useParams();
     // eslint-disable-next-line
-    const [show, setShow] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-
+    const [{ show,isLoading,error },dispatch] = useReducer(reducer,initialize);
+  
     useEffect( ()=> {
 
         let isMounted = true;
@@ -17,16 +38,12 @@ const Show = () => {
         apiGet(`/shows/${id}?embed[]=seasons&embed[]=cast`).then(results => {
             
                 if (isMounted){
-                    setShow(results);
-                    setIsLoading(false);
+                    dispatch( {type: 'FETCH_SUCCESS', show: results})
                 }  
             }) 
-            
-
         .catch(err => {
             if (isMounted){
-                setError(err.messege);
-                setIsLoading(false);
+                dispatch( {type: 'FETCH_FAILED', error: err.messege})
             }
         });
 
