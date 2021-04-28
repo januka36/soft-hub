@@ -12,8 +12,16 @@ export const TitleWrapper = styled.div`
     margin: 0 0 10px;
   }
 
+  .myne {
+    color: ${({ theme }) => theme.mainColors.blue};
+    font-size: 14px;
+    text-decoration: double;
+  }
+
   p {
     color: ${({ theme }) => theme.mainColors.dark};
     margin: 0;
+    
   }
+
 `;

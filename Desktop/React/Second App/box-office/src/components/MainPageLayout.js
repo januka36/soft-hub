@@ -5,8 +5,8 @@ import Title from './Title';
 const MainPageLayout = ({ children }) => {
     return (
         <div>
-            <Title title="Box 
-            office" subtitle="Are you looking for a movie or an actor?"/>
+            <Title title="TV 
+            SHOWS" subtitle1="Are you looking for a movie or an actor?" subtitle2="Created by Januka Apps"/>
             <Navs />
 
             {children}
