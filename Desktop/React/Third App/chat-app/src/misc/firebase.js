@@ -9,4 +9,5 @@ const config = {
         appId: "1:292474989693:web:bca56b6271023b71839514"
 };
 
+// eslint-disable-next-line no-unused-vars
 const app = firebase.initializeApp(config);
