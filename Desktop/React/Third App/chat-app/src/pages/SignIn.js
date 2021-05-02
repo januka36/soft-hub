@@ -11,6 +11,7 @@ const SignIn = () => {
             // eslint-disable-next-line no-unused-vars
             const { additionalUserInfo, user } = await auth.signInWithPopup(provider);
 
+
             if(additionalUserInfo.isNewUser) {
                 await database.ref(`/profiles/${user.uid}`).set({
                     name: user.displayName,
