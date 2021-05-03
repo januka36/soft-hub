@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Drawer } from 'rsuite';
+import { Button, Divider, Drawer } from 'rsuite';
 import { useProfile } from '../context/profile.context';
+import EditableInput from '../EditableInput';
 
 
 const Dashboard = ({ onSignOut }) => {
@@ -17,7 +18,8 @@ const Dashboard = ({ onSignOut }) => {
 
     <Drawer.Body>
         <h3>Hey, {profile.name}</h3>
-
+        <Divider />
+        <EditableInput />
     </Drawer.Body>
 
     <Drawer.Footer>
