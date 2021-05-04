@@ -1,10 +1,11 @@
-/* eslint-disable no-unused-vars */
+
 import React, { useState, useRef} from 'react';
 import { Alert, Button, Modal } from 'rsuite';
 import AvatarEditor from 'react-avatar-editor';
 import { storage,database } from '../../misc/firebase';
 import { useModalState } from '../../misc/custom-hooks';
 import { useProfile } from '../context/profile.context';
+import ProfileAvatar from '../ProfileAvatar';
 
 
 
@@ -68,7 +69,7 @@ const AvatarUploadBtn = () => {
                 cacheControl: `public, max-age=${3600 * 24 * 3}`
             });
 
-            const downloadUrl = uploadAvatarResult.ref.getDownloadURL()
+            const downloadUrl = await uploadAvatarResult.ref.getDownloadURL()
 
             const userAvatarRef = database.ref(`/profiles/${profile.uid}`).child('avatar');
 
@@ -87,8 +88,13 @@ const AvatarUploadBtn = () => {
 
     return (
         <div className="mt-3 text-center">
+
+            <ProfileAvatar 
+            src={profile.avatar} 
+            name={profile.name}  
+            className="width-200 height 200" /> 
             
-            <div>
+            <div> 
 
                 <label htmlFor="avatar-upload"
                 className="d-block cursor-pointer padded">
