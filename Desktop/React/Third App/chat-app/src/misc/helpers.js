@@ -10,7 +10,7 @@ export function getNameInitials(name){
 }
 
 export function transformToArrayWIthId(snapVal){
-    if (snapVal ? Object.keys(snapVal).map(roomId => {
+    return snapVal ? Object.keys(snapVal).map(roomId => {
         return {...snapVal[roomId], id : roomId};
-    }) : []);
+    }) : [];
 }
