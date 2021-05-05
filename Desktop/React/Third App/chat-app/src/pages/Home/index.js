@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router'
-import { Col, Grid, Row } from 'rsuite'
+import { Col, Grid, Row } from 'rsuite';
 import Sidebar from '../../components/Sidebar';
 import { RoomsProvider } from '../../components/context/rooms.context'
 import Chat from './Chat';

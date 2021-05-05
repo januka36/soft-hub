@@ -92,7 +92,7 @@ const AvatarUploadBtn = () => {
             <ProfileAvatar 
             src={profile.avatar} 
             name={profile.name}  
-            className="width-200 height 200" /> 
+            className="width-200 height-200 img-fullsize font-huge" /> 
             
             <div> 
 
