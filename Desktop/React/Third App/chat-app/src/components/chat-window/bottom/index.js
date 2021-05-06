@@ -76,7 +76,7 @@ const Bottom = () => {
                 <Input placeholder="Write a new message here..." value={input} onChange={onInputChange} onKeyDown={onKeyDown}/>
 
                 <InputGroup.Button color="blue" appearance="primary" onClick={onSendClick} disabled={isLoading}>
-                    <Icon icon="send" />
+                    <Icon icon="send-o" />
                 </InputGroup.Button>
            </InputGroup>
         </div>

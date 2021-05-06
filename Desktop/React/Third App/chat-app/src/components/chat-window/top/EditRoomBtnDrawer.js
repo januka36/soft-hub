@@ -63,7 +63,7 @@ const EditRoomBtnDrawer = () => {
                 </Drawer.Body>
 
                 <Drawer.Footer>
-                    <Button block onClick={close}>
+                    <Button block onClick={close} color='red'>
                         Close
                     </Button>
                 </Drawer.Footer>
