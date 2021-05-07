@@ -1,11 +1,17 @@
 import React from 'react';
 import TimeAgo from 'timeago-react';
 import ProfileAvatar from '../ProfileAvatar';
+import { useRooms } from '../context/rooms.context';
 
 const RoomItem = ( {room} ) => {
 
-    const { createdAt, name, lastMessage } = room;
-    
+    const { createdAt, lastMessage,  name } = room;
+
+    console.log(room)
+
+    const rooms = useRooms();
+    console.log(rooms);
+
     return (
         <div>
             <div className="d-flex justify-content-between align-items-center">
@@ -23,7 +29,7 @@ const RoomItem = ( {room} ) => {
                     </div>
                     <div className="text-disappear ml-2">
                         <div  className="italic">{lastMessage.author.name}</div>
-                        <span>{lastMessage.text}</span>
+                        <span>{lastMessage.text || lastMessage.file.name}</span>
 
                     </div>
                     </>: <span>No messages yet...</span>

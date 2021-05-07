@@ -36,7 +36,7 @@ const Bottom = () => {
 
     const onSendClick = async () => {
 
-        if(input.trim === ''){
+        if(input.trim() === ''){
             return;
         }
 

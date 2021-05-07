@@ -3,8 +3,6 @@ import { transformToArrayWIthId } from "../../misc/helpers";
 import { database } from "../../misc/firebase";
 
 
-
-
 const RoomsContext = createContext();
 
 export const RoomsProvider = ({children}) => {
