@@ -1,7 +1,8 @@
+/* eslint-disable */
 import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import { Alert } from 'rsuite';
-import { auth, database } from '../../../misc/firebase';
+import { auth, database, storage } from '../../../misc/firebase';
 import { transformToArrayWIthId } from '../../../misc/helpers';
 import MessageItem from './MessageItem';
 
@@ -25,6 +26,7 @@ const Messages = () => {
         }
     }, [chatId])
 
+    
     const handleAdmin = useCallback(async (uid) => {
         const adminsRef = database.ref(`/rooms/${chatId}/admins`);
 
@@ -74,7 +76,7 @@ const Messages = () => {
 
     }, []);
 
-    const handleDelete = useCallback(async (msgId) => {
+    const handleDelete = useCallback(async (msgId, file) => {
         // eslint-disable-next-line no-alert
         if (!window.confirm('Delete this message?')){
             return;
@@ -99,8 +101,19 @@ const Messages = () => {
 
             Alert.info('Message has been deleted', 4000)
         } catch (err) {
-            Alert.error(err.message, 4000)
+            // eslint-disable-next-line no-alert
+            return Alert.error(err.message)
         }
+
+        if(file){
+            try {
+                const fileRef = storage.refFromURL(file.url);
+                await fileRef.delete()
+        } catch (err) {
+            Alert.error(err.message);
+        }
+        };
+        
 
     }, [chatId, messages])
 
