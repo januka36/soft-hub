@@ -5,6 +5,7 @@ import ProfileAvatar from '../ProfileAvatar';
 const RoomItem = ( {room} ) => {
 
     const { createdAt, name, lastMessage } = room;
+    
     return (
         <div>
             <div className="d-flex justify-content-between align-items-center">
@@ -22,7 +23,7 @@ const RoomItem = ( {room} ) => {
                     </div>
                     <div className="text-disappear ml-2">
                         <div  className="italic">{lastMessage.author.name}</div>
-                        <span>{lastMessage.text || lastMessage.file.name}</span>
+                        <span>{lastMessage.text}</span>
 
                     </div>
                     </>: <span>No messages yet...</span>

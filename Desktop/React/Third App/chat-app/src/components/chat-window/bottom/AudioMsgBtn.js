@@ -1,11 +1,12 @@
 import React, {useState, useCallback} from 'react';
 import { InputGroup, Icon, Alert } from 'rsuite';
-import { ReactMic } from 'react-mic';
 import {useParams} from 'react-router';
+import { ReactMic } from 'react-mic';
 import { storage } from '../../../misc/firebase';
 
 
 const AudioMsgBtn = ({ afterUpload }) => {
+
     const {chatId} = useParams();
 
     const [isRecording, setIsRecording] = useState(false);
@@ -30,7 +31,7 @@ const AudioMsgBtn = ({ afterUpload }) => {
                     url: await snap.ref.getDownloadURL(),
             };
             setIsUploading(false);
-            afterUpload([file])
+            afterUpload([file]);
             
         } catch (err) {
             setIsUploading(false);
