@@ -19,7 +19,7 @@ const Top = () => {
                <h4 className="text-disappear d-flex align-items-center">
                    <Icon componentClass={Link} to="/" icon="arrow-circle-left" size="2x" 
                    className={isMobile ? 'd-inline-block p-0 mr-2 text-blue link-unstyled' : 'd-inline-block p-0 mr-2 text-blue link-unstyled'} />
-                   <span className="text-disappear"> {name}</span>
+                   <span className="text-disappear" style={{color: 'red', fontSize: 30}}> {name}</span>
                </h4>
 
                <ButtonToolbar className="ws-nowrap">
@@ -29,7 +29,7 @@ const Top = () => {
 
            </div>
            <div className="d-flex justify-content-between align-items-center">
-               <span>todo</span>
+               <span> </span>
                <RoomInfoBtnModal />
 
            </div>

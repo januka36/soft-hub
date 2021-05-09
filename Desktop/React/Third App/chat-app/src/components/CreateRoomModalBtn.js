@@ -67,31 +67,31 @@ const CreateRoomModalBtn = () => {
             
 
             <Button block color="green" onClick={open}>
-                <Icon icon="creative" /> Create new chat room
+                <Icon icon="creative" /> Create new channel
             </Button>
 
             <Modal show={isOpen} onHide={close}>
                 <Modal.Header>
                     <Modal.Title>
-                        New chat room
+                        New channel
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form fluid onChange={onFormChange} formValue={formValue} model={model} ref={formRef}>
                         <FormGroup>
-                            <ControlLabel>Room name</ControlLabel>
-                            <FormControl name="name" placeholder="Enter chat room name..." />
+                            <ControlLabel>Channel name</ControlLabel>
+                            <FormControl name="name" placeholder="Enter channel name..." />
                         </FormGroup>
 
                         <FormGroup>
                             <ControlLabel>Description</ControlLabel>
-                            <FormControl componentClass="textarea" rows={5} name="description" placeholder="Enter chat room description..." />
+                            <FormControl componentClass="textarea" rows={5} name="description" placeholder="Enter channel description..." />
                         </FormGroup>
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button block appearance="primary" onClick={onSubmit} disabled={isLoading}>
-                        Create new chat room
+                        Create new channel
                     </Button>
                 </Modal.Footer>
             </Modal>

@@ -63,7 +63,7 @@ const MessageItem = ({message, handleAdmin, handleLike, handleDelete}) => {
                 } 
             </ProfileInfoBtnModal>
             <TimeAgo datetime={createdAt} 
-                className="font-normal text-black-45 ml-2" />
+                className="font-normal text-black-45 ml-2" style={{color: 'blue'}} />
             <IconBtnControl
                 {...(isLiked ? {color: 'red'} : {})} 
                 isVisible={canShowIcons}
@@ -85,7 +85,7 @@ const MessageItem = ({message, handleAdmin, handleLike, handleDelete}) => {
 
         <div>
             {text && 
-            <span className="word-break-all">{text}</span>
+            <span className="word-break-all" style={{color: 'white'}}>{text}</span>
             }
             {file && renderFileMessage(file)}
             

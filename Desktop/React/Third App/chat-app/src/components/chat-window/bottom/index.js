@@ -72,13 +72,13 @@ const Bottom = () => {
         }
     }
 
-    const afterUpload = useCallback(async (files) => {
+    const afterUpload = useCallback(async files => {
         setIsLoading(true);
         const updates = {};
 
         files.forEach(file => {
 
-            const msgData = assembleMessage(profile, chatId);
+            const msgData = assembleMessage(profile, window.chatId);
             msgData.file = file;
             const messageId = database.ref('messages').push().key;
 
@@ -92,6 +92,7 @@ const Bottom = () => {
             msgId : lastMsgId,
         };
 
+
         try {
             await database.ref().update(updates);
             setIsLoading(false);
@@ -100,7 +101,8 @@ const Bottom = () => {
             Alert.error(err.message);
         }
 
-    }, [chatId, profile])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [profile]);
 
 
     return (

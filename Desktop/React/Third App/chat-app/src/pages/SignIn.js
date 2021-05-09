@@ -38,14 +38,15 @@ const SignIn = () => {
 
     }
     return (
-        <Container> 
+        <Container className="wall1"> 
             <Grid>
                 <Row>
                     <Col xs={24} md={12} mdOffset={6}>
                         <Panel className="mt-page">
                             <div className="text-center mb-3">
-                                <h2>Welcome to Chat</h2>
-                                <p>Progressive Chat Platform for Neophytes!</p>
+                                <h2 style={{color: "wheat"}}>Welcome to Soft-Hub</h2>
+                                <p style={{color: "wheat"}}>Where you can share knowledge</p>
+                                <p className="signintext">Created by Januka Apps</p>
                             </div>
                             <div className="mt-4">
                                 <Button block color="blue" onClick={onFaceboookSignIn}>

@@ -33,10 +33,10 @@ const EditRoomBtnDrawer = () => {
 
     return (
         <div>
-            <Button size="sm" color="red" onClick={open} style={{borderRadius: 50}}>
+            <Button size="sm" color="green" onClick={open} style={{borderRadius: 50}}>
                 A
             </Button>
-
+           
             <Drawer full={isMobile} show={isOpen} onHide={close} placement="right">
 
                 <Drawer.Header>
@@ -57,6 +57,7 @@ const EditRoomBtnDrawer = () => {
                         rows={5}
                         initialValue={description}
                         onSave={onDescriptionSave}
+                        label={<h6 className="mb-2">Description</h6>}
                         emptyMsg="Description cannot be empty"
                         wrapperClassName="mt-3"
                     />

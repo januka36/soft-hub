@@ -15,9 +15,9 @@ const RoomItem = ( {room} ) => {
     return (
         <div>
             <div className="d-flex justify-content-between align-items-center">
-                <h3 className="text-disappear">{name}</h3>
+                <h3 className="text-disappear" style={{color: 'wheat'}}>{name}</h3>
                 <TimeAgo datetime={lastMessage ? new Date(lastMessage.createdAt) : new Date(createdAt)} 
-                className="font-normal text-black-45" />
+                className="font-normal text-black-45" style={{color: 'blue'}} />
             </div>
 
             <div className="d-flex align-items-center text-black-70">
@@ -28,11 +28,11 @@ const RoomItem = ( {room} ) => {
                         <ProfileAvatar src={lastMessage.author.avatar} name={lastMessage.author.name} size="sm" />
                     </div>
                     <div className="text-disappear ml-2">
-                        <div  className="italic">{lastMessage.author.name}</div>
-                        <span>{lastMessage.text || lastMessage.file.name}</span>
+                        <div  className="italic" style={{color: 'wheat'}}>{lastMessage.author.name}</div>
+                        <span style={{color: 'white'}}>{lastMessage.text || lastMessage.file.name}</span>
 
                     </div>
-                    </>: <span>No messages yet...</span>
+                    </>: <span style={{color: 'white'}}>No messages yet...</span>
                 }
                 
             </div>

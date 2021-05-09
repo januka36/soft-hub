@@ -168,7 +168,7 @@ const Messages = () => {
         const items = [];
 
         Object.keys(groups).forEach((date)=>{
-            items.push( <li key={date} className="text-center mb-1 padded">{date}</li>)
+            items.push( <li key={date} className="text-center mb-1 padded" style={{color: 'pink'}}>{date}</li>)
 
             const msgs = groups[date].map(msg => 
                 (<MessageItem key={msg.id} 
@@ -181,14 +181,14 @@ const Messages = () => {
         return items;
     };
 
-    return <ul ref={selfRef} className="msg-list custom-scroll ">
+    return <ul className="dashwall" ref={selfRef} className="msg-list custom-scroll ">
         {messages && messages.length >= PAGE_SIZE && <li className="text-center mt-2 mb-2">
-            <Button onClick={onLoadMore} color="green">
+            <Button onClick={onLoadMore} color="blue">
                 Load More
             </Button>
         </li>}
         {isChatEmpty && <li>
-            No messages yet
+            <span style={{color: 'wheat'}}>No messages yet</span>
             </li>}
         {canShowMessages && renderMessages()}
         </ul>

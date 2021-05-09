@@ -22,11 +22,12 @@ const Sidebar = () => {
         <div className="h-100 pt-2">
             
             <div ref={topSidebarRef}>
+                <div><h1 className="text-center mb-3" style={{color: 'wheat'}}>Soft-Hub</h1></div>
                 <DashboardToggle />  
                 <CreateRoomModalBtn /> 
-                <Divider>Join conversation</Divider>             
+                <Divider style={{ margin: 0, padding: '30px 0', color: 'white'}}>Join conversation</Divider>             
             </div>
-            <ChatRoomList aboveElHeight={height} />
+            <ChatRoomList className="wall1" aboveElHeight={height} />
         </div>
     )
 }

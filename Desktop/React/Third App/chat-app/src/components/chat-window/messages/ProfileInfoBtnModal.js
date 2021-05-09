@@ -12,8 +12,8 @@ const ProfileInfoBtnModal = ({ profile, children, ...btnProps }) => {
 
     return (
         <div>
-            <Button {...btnProps} onClick={open}>
-                {shortName}
+            <Button {...btnProps} onClick={open} style={{backgroundColor: 'black', borderRadius: 50}}>
+                <span style={{color: 'wheat'}}>{shortName}</span>
             </Button>
             <Modal show={isOpen} onHide={close}>
                 <Modal.Header>
