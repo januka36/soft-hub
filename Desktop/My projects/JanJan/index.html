@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- Required meta tags always come first -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+      <!-- Bootstrap CSS -->
+      <!-- build:css css/main.css -->
+      <link rel="stylesheet" href="modules/bootstrap/dist/css/bootstrap.min.css">
+      <!--link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"-->
+      <!--link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"-->
+      <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <!-- endbuild -->
+      <title>Jan: Home</title>
+    </head>
+
+<body class="index-banner">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand mr-auto" href="index.html"><img class="logo" src="img/logo.jpg" height="40" width="38"></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+          </ul>
+          <span class="navbar-text">
+                    <a id="loginbutton">
+                    <span class="fa fa-sign-in"></span> Login</a>
+                </span>
+        </div>
+      </div>
+    </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" id="loginclose">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-12 col-sm-4">
+                        <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Enter Email">
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <input type="password" class="form-control" id="passcode" name="passcode" placeholder="Password">
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-12 offset-sm-4 ml-auto">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="approve" name="approve" value="">
+                              <label class="form-check-label" for="approve">
+                                <strong>Remember Me</strong>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <button type="cancel" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
+                        <button type="sign" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                      </div>
+                      </form>
+                      </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="Reserve" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Reserve a Table </h4>
+                            <button type="button" class="close" id="reserveclose">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group row">
+                              <label for="guestnumber" class="col-12 col-sm-2 col-form-label">Number of Guests</label>
+                              <div class="col-12 col-sm-6">
+                                <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                 <label class="form-check-label" for="inlineRadio1">1</label>
+                               </div>
+                               <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                 <label class="form-check-label" for="inlineRadio2">2</label>
+                               </div>
+                               <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                 <label class="form-check-label" for="inlineRadio3">3</label>
+                               </div>
+                               <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                 <label class="form-check-label" for="inlineRadio4">4</label>
+                               </div>
+                               <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                 <label class="form-check-label" for="inlineRadio5">5</label>
+                               </div>
+                               <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                 <label class="form-check-label" for="inlineRadio6">6</label>
+                               </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label for="section" class="col-12 col-sm-2 col-form-label">Section</label>
+                              <div class="btn-group btn-group-toggle col-sm-4" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked>Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                  <input type="radio" name="options" id="option2" autocomplete="off">Smoking
+                                </label>
+                              </div>
+                            </div>
+
+                             <div class="form-group row">
+                               <label for="dateandtime" class="col-12 col-sm-2 col-form-label">Date and Time</label>
+                               <div class="col-12 col-sm-4">
+                                 <input type="dateandtime" class="form-control" id="date" name="date" placeholder="Date">
+                               </div>
+                               <div class="col-12 col-sm-4">
+                                 <input type="datetime" class="form-control" id="time" name="time" placeholder="Time">
+                               </div>
+                             </div>
+
+                             <div class="form-grop row">
+                               <div class="offset-sm-2">
+                                 <button type="cancel" class="btn btn-secondary ml-0">Cancel</button>
+                                 <button type="reserve" class="btn btn-primary">Reserve</button>
+                               </div>
+                             </div>
+                           </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header align-items-center">
+                <div  class="col-12 col-sm-6">
+                    <h1>Jan-Jan Pizza Hut</h1>
+                    <p>Welcome to a family pizza place that anyone can enjoy! Taste a bite into a slice 
+                      of hot cheesy pizza!</p>
+                    <p>We are open till 12.00 p.m now..!</p>
+
+                </div>
+                <div  class="col-12 col-sm-2 align-self-center mr-auto">
+                  <img src="img/logo.jpg" class="img-fluid logo" alt="logo">
+                </div>
+                <div class="col-12 col-sm-3">
+                <span>
+                  <a  class="btn btn-warning btn-sm btn-block active" role="button" id="reservebut">
+                    <span><b>Reserve Table</b></span></a>
+                </span>
+                        <!--<span class="navbar-text">
+                                  <a data-toggle="modal" data-target="#Reserve">
+                                  <span class="fa fa-sign-in"></span> Reserve Table</a>
+                              </span>
+                <!-  <a href="#A" data-toggle="tooltip"data-html="true"  title="Or Call us at <br><strong>+852 12345678</strong>"
+                        data-placement="bottom" type="button" class="btn btn-warning btn-sm btn-block btn-lg active" role="button">Reserve Table</a>-->
+                </div>
+            </div>
+
+
+
+            </div>
+    </header>
+
+    <div  class="container">
+
+      <div class="row row-content">
+           <div class="col">
+             <div id="mycarousel" class="carousel slide" data-ride="carousel" style="background-image: url(/img/caritem/carww.jpg); box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);">
+               <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" style="width: 200px; "
+                                src="img/Wallpaper/car1.jpg" alt="car1">
+                            <div class="carousel-caption align-items-center d-none d-md-block">
+                                <h2>Enjoy mother's Day with Jan-Jan!</h2>
+                                <h1>Introducing</h1>
+                                <h2>Tandoori Chicken Pizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default"></span>Rs. 490</h2>
+                                
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid"
+                              src="img/Wallpaper/car2.jpg" alt="Buffet" style="width: 300px;">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h2>We are not fancy. We are not about sun-dried tomatoes, wood burning ovens, and cheap mushrooms!</h2>
+                              <p></p>
+                        </div>
+                      </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid"
+                              src="img/photo.jpg" alt="photo" style="height: 100px">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h2>Januka Fernando</h2>
+                              <h4>Owner</h4>
+                              <p>"I grew up in an Italian neighbourhood where the emphasis on food making was its simplicity and flavour. I remember the aroma of fresh sauce being simmered, the pungent smell of freshly grated cheese and the warmth and 
+                                love that excuded from the dinner table as the family ate together.."</p>
+                        </div>
+                       </div>
+                       <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                      <span id="carousel-button-icon"  class="fa fa-pause"></span>
+                    </button>
+                  </div>
+            </div>
+            </div>
+
+       </div>
+
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3> </h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+              <div class="media">
+                <img src="img/pizzas/tand.jpg" alt="promoadd"  class="d-flex mr-2 img-thumbnail align-top" style="width:150px; height:90px">
+                <div class="media-body">
+                  <h2>Tandoori Chicken Pizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">Rs. 490 Onwards</span></h2>
+                  <p></p>
+                  <p>Introducing cheesy chicken fiesta with finest tandoori chiken. Extra mozarella layer will treat you with better taste..</p>
+                  <p></p>
+                  <p>Contact us for more information..</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="row row-content align-items-center">
+          
+            <div class="col col-sm order-sm-last col-md">
+              <div class="media">
+                <div class="media-body">
+                  <h2>Mother's Day Special<span class="badge badge-danger">NEW</span></h2>
+                  <p></p>
+                  <h4>This Month's Promotion</h4>
+                  <h4></h4>
+                </div>
+                <img src="img/promos/moms speacia.jpg" alt="buffet" class="d-flex mr-4 img-thumbnail align-top" style="width:150px; height:90px">
+              </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3> </h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+              <div class="media">
+                <img src="img/photo.jpg" alt="Januka Fernando" class="d-flex mr-3 img-thumbnail align-top" style="width:180px">
+                <div class="media-body">
+                  <h2 class="mt-0">Januka Fernando</h2>
+                  <h4>Owner</h4>
+                  <p>Computer Science and Engineering graduate with a great flavour of pizza and new appetizer innovations. The biggest strength behind Januka is his family with many talents of cooking and inventing recipies. </p>
+                </div>
+              </div>
+            </div>
+        </div><a name="A"></a>
+
+        <!-- div class="row row-content"><a name="A"></a>
+          <div class="col-12 col-12 col-sm-8 offset-sm-2 align-center">
+            <div class="card" id="reserve-head">
+              <h3 class="card-header col-12 bg-warning text-white">Reserve a Table</h3>
+              <div class="card-body" id="reserve-body">
+               <form>
+                 <div class="form-group row">
+                   <label for="guestnumber" class="col-12 col-sm-2 col-form-label">Number of Guests</label>
+                   <div class="col-10 col-sm-6">
+                     <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                      <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                      <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                      <label class="form-check-label" for="inlineRadio6">6</label>
+                    </div>
+                   </div>
+                 </div>
+                  <div class="form-group row">
+                    <label for="dateandtime" class="col-12 col-sm-2 col-form-label">Date and Time</label>
+                    <div class="col-12 col-sm-4">
+                      <input type="dateandtime" class="form-control" id="date" name="date" placeholder="Date">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <input type="dateandtime" class="form-control" id="time" name="time" placeholder="Time">
+                    </div>
+                  </div>
+                  <div class="form-grop row">
+                    <div class="offset-sm-2 col-md-10">
+                      <button type="reserve" class="btn btn-primary">Reserve</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </!-- -->
+
+      </div>
+
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              34/1, Beach Road<br>
+		              Wadduwa<br>
+		              Sri Lanka<br>
+                      <i class="fa fa-phone fa-lg"></i>: +94778983758<br>
+                      <i class="fa fa-envelope fa-lg"></i>:
+                      <a href="janjanpizza@gmail.com">janjanpizza@gmail.com</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btb-social-icon btn-facebook" href="https://www.facebook.com/januka.fernando.14"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btb-social-icon btn-linkedin" href="https://www.linkedin.com/in/januka-shehan-fernando-4780401b2/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btb-social-icon btn-twitter" href="https://twitter.com/ShehanJanuka"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btb-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btb-social-icon btn-linkedin" href="janjanpizza@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Copyright 2021 Jan-Jan Pizza Hut</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
+    <script src="modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+</html>
